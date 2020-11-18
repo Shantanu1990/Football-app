@@ -52,7 +52,7 @@
 	var country=document.getElementById("Country").value;
 	var league=document.getElementById("League").value;
 	var team=document.getElementById("Team").value;
-    var apiUrl = "http://localhost:8081/standings/"+encodeURIComponent(country)+"/"+encodeURIComponent(league)+"/"+encodeURIComponent(team);
+    var apiUrl = "/standings/"+encodeURIComponent(country)+"/"+encodeURIComponent(league)+"/"+encodeURIComponent(team);
     fetch(apiUrl).then(response => {
       return response.json();
     }).then(data => {
