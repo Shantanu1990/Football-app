@@ -1,0 +1,6 @@
+{
+  "/restaddress": {
+    "target": "http://localhost:55555",
+    "secure": true
+  }
+}
