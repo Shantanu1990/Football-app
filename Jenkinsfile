@@ -1,11 +1,8 @@
 node {​​​​
 		withCredentials([usernamePassword( credentialsId: 'docker-hub-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-            usr = USERNAME
-            pswd = PASSWORD
-        }
         docker.withRegistry('', 'docker_id') {
 		
-		sh "sudo docker login -u ${usr} -p ${pswd}"
+		sh "sudo docker login -u ${USERNAME} -p ${PASSWORD}"
             git url: "https://github.com/Shantanu1990/Football-app.git", credentialsId: 'git_credentials'
     
         sh "git rev-parse HEAD > .git/commit-id"
@@ -17,5 +14,6 @@ node {​​​​
 
         app.push("${env.BUILD_NUMBER}")
         app.push "latest"
-    }
+		}
+	}
 }​​​​
