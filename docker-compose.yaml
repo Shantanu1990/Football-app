@@ -1,7 +1,7 @@
 version: '3'
 services: 
   football-project:
-    build: ./
+    image: shantanu777/footballappjenkins
     expose: 
       - "8081"
     ports: 
