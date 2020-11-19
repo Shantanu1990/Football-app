@@ -1,4 +1,4 @@
-node("docker") {
+node {
     docker.withRegistry('shantanu777', 'docker_id') {
     
         git url: "https://github.com/Shantanu1990/Football-app.git", credentialsId: 'git_credentials'
