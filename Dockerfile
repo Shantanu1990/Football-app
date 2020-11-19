@@ -10,4 +10,4 @@ RUN mvn clean install
 FROM openjdk:11
 WORKDIR /app
 COPY --from=build /app/target/football-0.0.1-SNAPSHOT.jar /app
-CMD ["java -jar football-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/app/football-0.0.1-SNAPSHOT.jar"]
