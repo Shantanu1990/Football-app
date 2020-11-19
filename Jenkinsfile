@@ -1,6 +1,6 @@
 node {​​​​
        def DOCKER_REGISTRY_URI="https://hub.docker.com/repository/docker/shantanu777/footballappjenkins"
-	   withCredentials([usernamePassword( credentialsId: 'docker-hub-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+	   withCredentials([usernamePassword( credentialsId: 'docker_id', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
             usr = USERNAME
             pswd = PASSWORD
         sh "sudo docker login --password=${​​​​pswd}​​​​ --username=${​​​​usr}​​​​ ${​​​​DOCKER_REGISTRY_URI}​​​​"
