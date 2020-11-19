@@ -1,6 +1,7 @@
+sudo apt install maven
 #cd football-ui
 #rm -r dist
-cd /src/main/resources/static
+cd src/main/resources/static
 rm -r *.*
 #cd ../../../../football-ui
 #echo "Starting npm install, please wait..."
