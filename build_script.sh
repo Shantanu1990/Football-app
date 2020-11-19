@@ -11,4 +11,5 @@ rm -r *.*
 cd ../../../../
 echo "running mvn clean install"
 mvn clean install
-java -jar target/football-0.0.1-SNAPSHOT.jar
+#java -jar target/football-0.0.1-SNAPSHOT.jar
+sudo docker-compose up

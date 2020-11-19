@@ -6,7 +6,3 @@ services:
       - "8081"
     ports: 
       - 8081:8081
-networks:
-  default:
-    external:
-      name: nat      
