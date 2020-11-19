@@ -2,9 +2,9 @@ FROM alpine/git
 WORKDIR /app
 RUN git clone https://github.com/Shantanu1990/Football-app.git
 
-FROM maven:3.5-jdk-8-alpine as build (2)
+FROM maven:3.5-jdk-8-alpine
 WORKDIR /app
-COPY --from=clone /app/Football-app /app (3)
+COPY --from=clone /app/Football-app /app
 RUN mvn clean install
 
 FROM openjdk:11
