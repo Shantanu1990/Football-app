@@ -1,5 +1,5 @@
 node {
-    docker.withRegistry('shantanu777', 'docker_id') {
+    docker.withRegistry('shantanu777/footballappjenkins', 'docker_id') {
     
         git url: "https://github.com/Shantanu1990/Football-app.git", credentialsId: 'git_credentials'
     
